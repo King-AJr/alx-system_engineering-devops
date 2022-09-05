@@ -1,0 +1,26 @@
+.:
+./		    3-twofiles
+../		    4-lastlines
+0-hello_world	    5-firstlines
+10-no_more_js	    6-third_line
+11-directories	    7-file
+12-newest_files     8-cwd_state
+13-unique	    9-duplicate_last_line
+14-findthatword     \\*\\'Best
+15-countthatword    \ \\*\\\\'"Best\ School"\\'\\\\*$\\?\\*\\*\\*\\*\\*:)
+16-whatsnext	    *\\"Best\ School"\\\\*$?*****:)
+17-hidethisword     .cat.swp
+18-letteronly	    dr/
+19-AZ		    "e3"
+1-confused_smiley   file
+20-hiago	    iacta
+21-reverse	    ls_cwd_content
+22-users_and_homes  README.md
+"23"		    test
+2-hellofile	    test.js/
+
+./dr:
+./  ../
+
+./test.js:
+./  ../
