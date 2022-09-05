@@ -1,2 +1,2 @@
 #!/binlbash
-cat /etc/passwd /etc/hosts
+pr -m -t -w 80 <(fold -w 40  /etc/passwd ) <(fold -w 40 /etc/hosts)
