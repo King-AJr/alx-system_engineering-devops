@@ -1,3 +1,2 @@
 #!/bin/bash
-
-find /etc/ssh/sshd_config -type f -name [[a:z]]*
+ls /etc/ssh/sshd_config | grep ^[[:alpha:]]
