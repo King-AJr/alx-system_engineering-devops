@@ -1,1 +1,1 @@
-this a repository for alx se devops shell scripting task
+this directory is  foralx task on shell redirections
