@@ -1,2 +1,2 @@
-#!/binlbash
-cat /etc/passwd /etc/shadow
+#!/bin/bash
+cat /etc/passwd /etc/hosts
