@@ -1,2 +1,2 @@
 #!/binlbash
-pr -m -t -w 120 /etc/hosts /etc/passwd 
+cat /etc/passwd /etc/shadow
