@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 #prints second field after - as our delimeter
 
-ls | cut -d "-" -f 2
+list=$(ls)
+for i in $list; do
+  echo "$i" | cut -d '-' -f2
+done
