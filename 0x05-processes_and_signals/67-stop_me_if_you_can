@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#stops script in task 7 
+
+pkill pgrep -f 7-highlander 

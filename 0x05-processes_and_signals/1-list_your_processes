@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#this script prints all curently running processes including those without tty
+
+
+ps -auxf
