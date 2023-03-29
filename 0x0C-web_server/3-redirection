@@ -1,0 +1,28 @@
+#!/usr/bin/env bash 
+#install and set up nginx 
+
+sudo apt -y install nginx
+sudo mkdir -p /var/www/html
+sudo chown -R $USER:$USER /var/www/html
+sudo chown -R $USER:$USER /etc/nginx
+
+echo "Hello World!"  > /var/www/html/index.html
+echo "http {
+        server {
+        listen      80 default_server;
+        listen      [::]:80 default_server;
+        root        /var/www/html;
+        index       index.html index.htm;
+	location / {
+	root	/var/www/html;
+	}
+	location /redirect_me {
+	return 301 http://cuberule.com/;
+	}
+	]
+        }
+        }
+        events {}
+" > /etc/nginx/nginx.conf
+sudo nginx -t
+sudo nginx -s reload
