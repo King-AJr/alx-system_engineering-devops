@@ -2,7 +2,7 @@
 #install and set up nginx 
 
 sudo apt-get update
-sudo apt -y install nginx
+sudo apt-get install -y nginx
 sudo mkdir -p /var/www/html
 sudo chown -R $USER:$USER /var/www/html
 sudo chown -R $USER:$USER /etc/nginx

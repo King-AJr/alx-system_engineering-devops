@@ -2,7 +2,7 @@
 # install and configure haproxy
 
 sudo apt-get update
-sudo apt-get install haproxy
+sudo apt-get install -y haproxy
 sudo chown -R $USER:$USER /etc/haproxy
 
 echo "  frontend http-in
@@ -15,5 +15,5 @@ echo "  frontend http-in
                 balance roundrobin
                 server 145060-web-01 52.201.219.224:80 check
                 server 145060-web-02 54.237.72.39:80 check
-        " > /etc/haproxy/haproxy.cfg
+        " >> /etc/haproxy/haproxy.cfg
         sudo service haproxy restart
