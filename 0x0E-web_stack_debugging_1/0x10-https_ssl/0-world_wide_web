@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# takes a domain and subdoamin and displays infos on domain
+
+domain_info() {
+	output=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION' | tr '\t' '\n' | tail -2)
+	record=$(echo "$output" | head -n 1)
+	ip=$(echo "$output" | tail -1)
+	awk -v v1="$2" -v v2="$record" -v v3="$ip" 'BEGIN { printf("The subdomain %s is a %s record and points to %s\n", v1, v2, v3) }'
+}
+
+if [ "$#" == 1 ]
+then
+	domain_info "$1" "www"
+	domain_info "$1" "lb-01"
+	domain_info "$1" "web-01"
+	domain_info "$1" "web-02"
+elif [ "$#" == 2 ]
+then
+	domain_info "$1" "$2"
+fi
