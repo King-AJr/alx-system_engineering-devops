@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# runs command whoami under username taken in
+
+current = $(whoami)
+sudo su #2
+whoami
+sudo su $current
