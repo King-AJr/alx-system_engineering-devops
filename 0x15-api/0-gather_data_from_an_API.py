@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-    take an employee id and fetch
-    information about his/her TODO list progress.
-"""
+"""take an employee id and fetch information about his/her TODO list progress."""
 
 import requests
 import sys
