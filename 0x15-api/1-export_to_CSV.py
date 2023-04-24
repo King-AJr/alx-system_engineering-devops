@@ -2,10 +2,9 @@
 """
     export data in csv format
 """
-
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == '__main__':
     user_id = sys.argv[1]
@@ -21,7 +20,8 @@ if __name__ == '__main__':
     todos = todo_info.json()
     filename = '{}.csv'.format(user_id)
     with open(filename, 'w') as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, quoting=csv.QUOTE_ALL)
         for row in todos:
-            writer.writerow([user_id, employee_name, 
-            row.get('completed'), row.get('title')])
+            writer.writerow(
+		[user_id, employee_name,
+                    row.get('completed'), row.get('title')])
