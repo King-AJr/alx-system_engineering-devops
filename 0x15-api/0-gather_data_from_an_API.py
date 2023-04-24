@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""take an employee id and fetch
-information about his/her TODO list progress."""
+""" take an employee id and fetch
+    information about his/her TODO list progress."""
 
 import requests
 import sys
@@ -23,7 +23,8 @@ if __name__ == '__main__':
         if i['completed'] is True:
             count += 1
 
-    print(f"Employee {emp_name} is done with tasks({count}/{len(todos)}): ")
+    print("Employee {} is done with tasks({}/{}): ",
+          format(emp_name, count, len(todos)))
     for i in todos:
         if i['completed'] is True:
             print(f"\t{i['title']}")
