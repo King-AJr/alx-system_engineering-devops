@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""take an employee id and fetch information about his/her TODO list progress."""
+"""take an employee id and fetch
+information about his/her TODO list progress."""
 
 import requests
 import sys
@@ -12,18 +13,17 @@ if __name__ == '__main__':
     user_info_url = 'https://jsonplaceholder.typicode.com/users'
     user_info = requests.get(user_info_url, params=params)
     employee = user_info.json()[0]
-    employee_name = employee['name']
+    emp_name = employee['name']
 
     todo_info_url = 'https://jsonplaceholder.typicode.com/todos'
     todo_info = requests.get(todo_info_url, params=todo_params)
     todos = todo_info.json()
 
     for i in todos:
-        if i['completed'] == True:
+        if i['completed'] is True:
             count += 1
 
-    print(f"Employee {employee_name} is done with tasks({count}/{len(todos)}):")
+    print(f"Employee {emp_name} is done with tasks({count}/{len(todos)}): ")
     for i in todos:
-        if i['completed'] == True:
+        if i['completed'] is True:
             print(f"\t{i['title']}")
-
