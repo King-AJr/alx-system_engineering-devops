@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-    take an employee id and fetch
-    information about his/her TODO list progress.
+    export data in csv format
 """
 
 import requests
@@ -22,11 +21,4 @@ if __name__ == '__main__':
     todos = todo_info.json()
 
     for i in todos:
-        if i['completed'] == True:
-            count += 1
-
-    print(f"Employee {employee_name} is done with tasks({count}/{len(todos)}):")
-    for i in todos:
-        if i['completed'] == True:
-            print(f"\t{i['title']}")
-
+        print(i)
