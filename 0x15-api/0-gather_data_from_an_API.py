@@ -23,8 +23,8 @@ if __name__ == '__main__':
         if i['completed'] is True:
             count += 1
 
-    print("Employee {} is done with tasks({}/{}): ",
+    print("Employee {} is done with tasks({}/{}): ".
           format(emp_name, count, len(todos)))
     for i in todos:
         if i['completed'] is True:
-            print(f"\t{i['title']}")
+            print("\t{}".format(i['title']))
