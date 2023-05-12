@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-""" queries and api and returns required info."""
+""" queries an api and returns required info."""
 import requests
-
-
 
 
 def recurse(subreddit, hotlist = [], count=0):
@@ -23,5 +21,6 @@ def recurse(subreddit, hotlist = [], count=0):
            recurse(subreddit, hotlist, count)
         if len(hotlist) == 0:
             return None
+        return hotlist
     else:
         return None
