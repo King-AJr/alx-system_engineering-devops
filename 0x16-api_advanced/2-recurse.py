@@ -15,7 +15,8 @@ def recurse(subreddit, after="", hotlist=[], count=0):
               'after': after,
               'count': count,
     }
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    response = requests.get(url, headers=headers,
+                            params=params, allow_redirects=False)
     if response.status_code == 200:
         children = response.json().get("data").get("children")
         after = response.json().get("data").get("after")
